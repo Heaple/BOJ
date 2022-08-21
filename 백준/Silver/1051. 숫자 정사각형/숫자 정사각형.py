@@ -7,7 +7,7 @@ rectangle = [input() for _ in range(N)]
 res = 0
 for i in range(N):
     for j in range(M):
-        for k in range(1, min(N, M)+1):
+        for k in range(min(N, M), 0, -1):
             if i+k < N and j+k < M and 0 <= i+k and 0 <= j+k:
                 if rectangle[i][j] == rectangle[i][j+k] == rectangle[i+k][j+k] == rectangle[i+k][j]:
                     res = max(res, (k+1)**2)
