@@ -1,5 +1,9 @@
+import sys
+
+input = sys.stdin.readline
+
 N = int(input())
-w = [input() for _ in range(N)]
+w = [input().rstrip() for _ in range(N)]
 
 w.sort()
 w.sort(key=lambda x: len(x))
